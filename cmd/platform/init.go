@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/mattermost/platform/api"
+	"github.com/mattermost/platform/app"
 	"github.com/mattermost/platform/utils"
 	"github.com/spf13/cobra"
 )
@@ -36,6 +36,6 @@ func initDBCommandContext(configFileLocation string) {
 
 	utils.ConfigureCmdLineLog()
 
-	api.NewServer()
-	api.InitStores()
+	app.NewServer()
+	app.InitStores()
 }
